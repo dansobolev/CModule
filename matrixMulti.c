@@ -7,8 +7,8 @@
 
 
 static PyObject* py_echo( PyObject* self, PyObject* args ) {
-   
-   int i, j, k;
+
+    int i, j, k;
     int **A = (int**)malloc(N * sizeof(int*));
     int **B = (int**)malloc(N * sizeof(int*));
     int **C = (int**)malloc(N * sizeof(int*));
@@ -79,9 +79,9 @@ static PyObject* py_echo( PyObject* self, PyObject* args ) {
     free(A);
     free(B);
     free(C);
-	
 
-   return Py_None;
+
+    return Py_None;
 }
 
 static PyMethodDef matrixMulti_methods[] = {
@@ -106,7 +106,7 @@ PyMODINIT_FUNC PyInit_matrixMulti() {
 
     m = PyModule_Create(&matrixMultimodule);
     if (m == NULL)
-        return NULL;	
+        return NULL;
 
    return m;
 }
